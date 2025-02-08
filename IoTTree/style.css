@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+:root{
+    --white: #fff;
+    --green: #59B142;
+    --medium-green: #42B156;
+    --dark-green: #2b4e23;
+}
+
+
+.title{
+    color: var(--medium-green);
+    margin-top: 28px;
+    font-size: 36px;
+    cursor: default;
+}
+.highlight{
+    color: var(--medium-green);
+    cursor: default;
+}
+
+header{
+    width: 100%;
+    padding: 20px 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    box-shadow: 8px 8px 10px rgba(136, 136, 136, 0.75);
+    z-index: 100;
+    transition: .5s;
+}
+header img{
+    width: 70%;
+}
+header.rolagem{
+    background-color: var(--dark-green);
+    padding: 20px 28px 0;
+    transition: .5s;
+}
+
+.header-container{
+    width: 100%;
+    margin: auto;
+}
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header ul{
+    list-style: none;
+}
+header ul li{
+    display: inline-block;
+    margin: 0 40px;
+}
+header ul li a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    text-shadow: black 0.1em 0.1em 0.2em
+}
+header ul li a:hover{
+    text-decoration: underline;
+    transition: all.5s;
+}
+i{
+    color: black;
+    font-size: 28px;
+    display: none;
+}
+
+/* OVERLAY */
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: .3s;
+}
+
+
+
+/* Banner */
+.banner{
+    background-image: url(img/Banner-Background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+}
+.banner h1{
+    color: var(--white);
+    font-family: "League Spartan", serif;
+    font-size: 64px;
+    width: 60%;
+}
+
+.cta{
+    margin-top: 20px;
+    width: 30%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--medium-green);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.cta:hover{
+    background-color: var(--dark-green);
+    transition: all .5s;
+}
+
+/* Seção SOBRE */
+.sections{
+    padding-top: 80px;
+    width: 100%;
+    text-align: center;
+}
+
+.container-about{
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+.about-left{
+    width: 50%;
+}
+.about-right{
+    width:  50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.about-left img{
+    filter: drop-shadow(0 0 1rem rgb(206, 206, 206));
+    z-index: 0;
+}
+.about-right h3{
+    font-size: 28px;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+.about-right p{
+    width: 90%;
+    line-height: 2;
+}
+
+/* Seção Sobre */
+.works-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.subtitle{
+    margin-bottom: 40px !important;
+}
+.circle-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.circle{
+    background-color: var(--green);
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle img{
+    width: 50%;
+}
+
+.works-container h4{
+    margin-top: 20px;
+    color: var(--medium-green);
+    font-size: 24px;
+}
+
+/* Section Benefits */
+.benefits-container{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    width: 30%;
+    background-color: var(--medium-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 20px;
+}
+.card-circle{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.card h4{
+    color: #fff;
+    font-size: 24px;
+}
+
+.card p, .card span, .card h5{
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+}
+.card h5{
+    margin-top: 20px;
+}
+.btn-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.card button{
+    margin-top: 40px;
+    width: 70%;
+    padding: 8px;
+    background-color: #fff;
+    color: var(--medium-green);
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.card button:hover{
+    background-color: var(--dark-green);
+    color: #fff;
+    transition: all .5s;
+}
+
+/* Impact */
+.impact-container{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.impact-left{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.data{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    transition: all .5s;
+    color: var(--medium-green);
+
+}
+.data span{
+    font-size: 96px;
+    font-family: "League Spartan", serif;
+    font-weight: 600;
+    margin-right: 40px;
+}
+.data p{
+    font-family: "League Spartan", serif;
+    font-size: 36px;
+    font-weight: 600;
+}
+.data:hover{
+    background-color: var(--green);
+    color: white !important;
+    border-radius: 0 20px 20px 0;
+}
+
+/* Contact */
+.contact{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact .form{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: auto;
+    background-color: var(--green);
+    padding: 40px 2px;
+    border-radius: 12px;
+}
+.contact .form input{
+    margin: auto;
+    width: 70%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.contact textarea{
+    margin: auto;
+    width: 70%;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    padding: 20px;
+    border: none;
+    outline: none;
+}
+
+.form button{
+   width: 70%;
+   outline: none;
+   border: none;
+   margin: auto;
+   padding: 8px;
+   font-size: 18px;
+   font-weight: 500;
+   color: gray;
+   background-color: var(--white);
+   border-radius: 8px;
+   cursor: pointer;
+   transition: all .5s;
+   margin-bottom: 40px;
+}
+.form button:hover{
+    background-color: var(--dark-green);
+    color: white;
+    transition: all .5s;
+}
+
+.sub2{
+    margin-top: 20px;
+}
+
+.social-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.contact-circle{
+    height: 150px;
+    width: 150px;
+    background-color: var(--medium-green);
+    margin-bottom: 140px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s;
+}
+.contact-circle:hover{
+    background-color: var(--dark-green);
+    transition: all .5s;
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--green);
+    width: 100%;
+}
+.copyright p{
+    color: white;
+    font-weight: 500;
+}
+.copyright img{
+    width: 40%;
+}
+.credit{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(13, 12, 24);
+    color: white;
+    width: 100%;
+}
+.social-content{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 600px) {
+   
+   body{
+    overflow: hidden;
+   }
+   
+    header{
+    width: 100vw;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: var(--dark-green);
+   }
+   
+    .nav-list{
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 60vw;
+    height: 92vh;
+    background-color:var(--dark-green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+   }
+
+   .nav-list li{
+    margin-left: 0;
+    opacity: 0;
+   }
+
+   .mobile-menu{
+    display: block;
+    
+   }
+
+   .nav-list.active{
+    transform: translateX(0);
+   }
+
+   .mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+   }
+   .mobile-menu.active .line2{
+    opacity: 0;
+   }
+   .mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+   }
+
+   .banner{
+    width: 100vw;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+   }
+   .banner h1{
+    font-size: 36px;
+    width: 80vw;
+   }
+   .cta{
+    width: 60vw;
+   }
+
+   .about{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+   }
+   .container-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+   }
+   .container-about img{
+    width: 100%;
+   }
+
+   
+   .container-about h3{
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+   }
+   .container-about p{
+    font-size: 16px;
+    width: 100%;
+   }
+
+   .works-container{
+    flex-direction: column;
+   }
+
+   .circle-container p{
+    margin-bottom: 40px;
+    width: 80%;
+   }
+
+   .benefits-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+   .benefits-container .card{
+    width: 80%;
+    margin-bottom: 40px;
+   }
+
+   .impact-container{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+   }
+
+   .impact-left{
+    width: 100vw;
+   }
+
+   .impact-left .data span{
+    font-size: 80px;
+   }
+
+   .impact-right{
+    display: none;
+   }
+
+   @keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;transform: translateX(0px);
+    }
+   }
+  
+}
+
