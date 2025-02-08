@@ -444,9 +444,7 @@ footer{
 /* Responsividade */
 @media only screen and (max-width: 600px) {
    
-   body{
-    overflow: hidden;
-   }
+   
    
     header{
     width: 100vw;
@@ -576,6 +574,13 @@ footer{
 
    .impact-right{
     display: none;
+   }
+
+   .social-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
    }
 
    @keyframes navLinkFade{
